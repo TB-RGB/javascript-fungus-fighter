@@ -55,6 +55,16 @@ function arcaneScepter(event){
 
 function entangle(event){
     console.log('entangle pushed!')
+    myAP -= 23
+    if (myAP < 0){
+        myAP = 0
+    }
+    console.log('myAP:', myAP)
+    fungusHP -= 9
+    if (fungusHP < 0){
+        fungusHP = 0
+    }
+    console.log('fungusHP:', fungusHP)
 }
 
 
@@ -66,6 +76,16 @@ function entangle(event){
 
 function dragonBlade(event){
     console.log('dragon blade pushed!')
+    myAP -= 38
+    if (myAP < 0){
+        myAP = 0
+    }
+    console.log('myAP:', myAP)
+    fungusHP -= 47
+    if (fungusHP < 0){
+        fungusHP = 0
+    }
+    console.log('fungusHP:', fungusHP)
 }
 
 
@@ -77,6 +97,16 @@ function dragonBlade(event){
 
 function starFire(event){
     console.log('star fire pushed!')
+    myAP -= 33
+    if (myAP < 0){
+        myAP = 0
+    }
+    console.log('myAP:', myAP)
+    fungusHP -= 25
+    if (fungusHP < 0){
+        fungusHP = 0
+    }
+    console.log('fungusHP:', fungusHP)
 }
 
 
