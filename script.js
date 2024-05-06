@@ -9,6 +9,11 @@ let myAP = 100;
 function onReady() {
     console.log("Ready to go!")
     
+    document.getElementById('arcane-scepter').addEventListener('click', arcaneScepter)
+    document.getElementById('entangle').addEventListener('click', entangle)
+    document.getElementById('dragon-blade').addEventListener('click', dragonBlade)
+    document.getElementById('star-fire').addEventListener('click', starFire)
+
     // Make sure you check the index.html file! 
     // There are lots of buttons and things ready for you to hook into here!
     
@@ -27,6 +32,9 @@ onReady()
 // ? Ensure neither AP or HP values are negative, set to 0 if so
 // ? call render function at end to reflect state changes
 
+function arcaneScepter(event){
+    console.log('arcane scepter pushed!')
+}
 
 
 
@@ -35,6 +43,9 @@ onReady()
 // ? Ensure neither AP or HP values are negative, set to 0 if so
 // ? call render function at end to reflect state changes
 
+function entangle(event){
+    console.log('entangle pushed!')
+}
 
 
 
@@ -43,6 +54,9 @@ onReady()
 // ? Ensure neither AP or HP values are negative, set to 0 if so
 // ? call render function at end to reflect state changes
 
+function dragonBlade(event){
+    console.log('dragon blade pushed!')
+}
 
 
 
@@ -51,6 +65,9 @@ onReady()
 // ? Ensure neither AP or HP values are negative, set to 0 if so
 // ? call render function at end to reflect state changes
 
+function starFire(event){
+    console.log('star fire pushed!')
+}
 
 
 // ! Function to handle rendering state changes to the DOM
