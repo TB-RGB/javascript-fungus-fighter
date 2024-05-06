@@ -44,6 +44,8 @@ function arcaneScepter(event){
         fungusHP = 0
     }
     console.log('fungusHP:', fungusHP)
+
+    renderStateChanges()
 }
 
 
@@ -65,6 +67,8 @@ function entangle(event){
         fungusHP = 0
     }
     console.log('fungusHP:', fungusHP)
+
+    renderStateChanges()
 }
 
 
@@ -86,6 +90,8 @@ function dragonBlade(event){
         fungusHP = 0
     }
     console.log('fungusHP:', fungusHP)
+
+    renderStateChanges()
 }
 
 
@@ -107,6 +113,8 @@ function starFire(event){
         fungusHP = 0
     }
     console.log('fungusHP:', fungusHP)
+
+    renderStateChanges()
 }
 
 
@@ -114,3 +122,19 @@ function starFire(event){
 // * Update AP & HP values rendered on the bars on top
 // ? If fungusHP = 0 change class on fungus from 'walk' to 'dead'
 // ? If myAP = 0 change class on fungus from 'walk' to 'jump' and attack buttons 'disabled' class
+
+function renderStateChanges(){
+    console.log('render has been called!')
+
+    let apCount = document.getElementById('ap-count')
+    let apMeter = document.getElementById('ap-meter')
+    let hpCount = document.getElementById('hp-count')
+    let hpMeter = document.getElementById('hp-meter')
+
+    apCount.innerText = `${myAP} AP`
+    apMeter.value = myAP
+    hpCount.innerText = `${fungusHP} HP`
+    hpMeter.value = fungusHP
+
+
+}
