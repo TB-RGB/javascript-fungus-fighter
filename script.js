@@ -34,6 +34,16 @@ onReady()
 
 function arcaneScepter(event){
     console.log('arcane scepter pushed!')
+    myAP -= 12
+    if (myAP < 0){
+        myAP = 0
+    }
+    console.log('myAP:', myAP)
+    fungusHP -= 14
+    if (fungusHP < 0){
+        fungusHP = 0
+    }
+    console.log('fungusHP:', fungusHP)
 }
 
 
