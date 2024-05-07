@@ -131,6 +131,9 @@ function renderStateChanges(){
     let hpCount = document.getElementById('hp-count')
     let hpMeter = document.getElementById('hp-meter')
     let fungus = document.getElementById('freaky-fungus')
+    let buttons = document.querySelectorAll('button')
+
+    // console.log(buttons)
 
     apCount.innerText = `${myAP} AP`
     apMeter.value = myAP
@@ -139,6 +142,13 @@ function renderStateChanges(){
 
     if (fungusHP === 0){
         fungus.classList.replace('walk', 'dead')
+    }
+
+    if (myAP === 0){
+        fungus.classList.replace('walk', 'jump')
+        for (let button of buttons){
+            button.disabled = true
+        }
     }
 
 
