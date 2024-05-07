@@ -130,11 +130,16 @@ function renderStateChanges(){
     let apMeter = document.getElementById('ap-meter')
     let hpCount = document.getElementById('hp-count')
     let hpMeter = document.getElementById('hp-meter')
+    let fungus = document.getElementById('freaky-fungus')
 
     apCount.innerText = `${myAP} AP`
     apMeter.value = myAP
     hpCount.innerText = `${fungusHP} HP`
     hpMeter.value = fungusHP
+
+    if (fungusHP === 0){
+        fungus.classList.replace('walk', 'dead')
+    }
 
 
 }
