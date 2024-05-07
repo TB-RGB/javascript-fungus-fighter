@@ -5,6 +5,7 @@
 
 let fungusHP = 100;
 let myAP = 100;
+let intvID;
 
 function onReady() {
   console.log("Ready to go!");
@@ -145,4 +146,36 @@ function renderStateChanges() {
       button.disabled = true;
     }
   }
+
+  hpRegeneration()
+}
+
+// ! Function to check for HP and begin regeneration() if less than 50
+// * Will be completed by two other functions: regen()/stopRegen() if over or under 50
+// ? regen() will be called by setInterval() within this function
+// ? stopRegen() will include clearInterval() and be called if hp is over 50, likely placed in render()
+
+function hpRegeneration(){
+    if (fungusHP < 50 && !intvID){
+        intvID = setInterval(regen,1000)
+    } else {
+        stopRegen()
+    }
+}
+
+function regen(){
+    let hpCount = document.getElementById("hp-count");
+    let hpMeter = document.getElementById("hp-meter");
+
+    fungusHP++
+    hpCount.innerText = `${fungusHP} HP`
+    hpMeter.value = fungusHP
+    
+}
+
+function stopRegen(){
+    if (intvID && fungusHP >= 50){
+        clearInterval(intvID)
+        intvID = null
+    }
 }
