@@ -121,7 +121,7 @@ function starFire(event){
 // ! Function to handle rendering state changes to the DOM
 // * Update AP & HP values rendered on the bars on top
 // ? If fungusHP = 0 change class on fungus from 'walk' to 'dead'
-// ? If myAP = 0 change class on fungus from 'walk' to 'jump' and attack buttons 'disabled' class
+// ? If myAP = 0 change class on fungus from 'walk' to 'jump' and attack buttons 'disabled' = true
 
 function renderStateChanges(){
     console.log('render has been called!')
